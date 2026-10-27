@@ -25,13 +25,13 @@ main :: proc() {
 		field_ptr := foo_ptr + field_offset
 
 		switch field_type.id {
-		case typeid_of(u32):
+		case u32:
 			field_ptr := cast(^u32)field_ptr
 			fmt.println(field_ptr^)
-		case typeid_of(f32):
+		case f32:
 			field_ptr := cast(^f32)field_ptr
 			fmt.println(field_ptr^)
-		case typeid_of(f64):
+		case f64:
 			field_ptr := cast(^f64)field_ptr
 			fmt.println(field_ptr^)
 		}
